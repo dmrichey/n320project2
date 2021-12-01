@@ -22,7 +22,7 @@ export default function App() {
   }, []);
 
   // Display Tree
-  if (currentDisplay == 0) {
+  if (currentDisplay === 0) {
     return (
       <div className="App">
         <Tree
@@ -33,7 +33,7 @@ export default function App() {
       </div>
     );
   } // Display Family Node
-  else if (currentDisplay == 1) {
+  else if (currentDisplay === 1) {
     return (
       <div className="App">
         <Family
@@ -44,7 +44,7 @@ export default function App() {
       </div>
     );
   } // Display Person Node
-  else if (currentDisplay == 2) {
+  else if (currentDisplay === 2) {
     return (
       <div className="App">
         <Person
@@ -57,7 +57,7 @@ export default function App() {
       </div>
     );
   } // Displays Tree and Highlights Ancestors of Current Person
-  else if (currentDisplay == 3) {
+  else if (currentDisplay === 3) {
     return (
       <div className="App">
         <Ancestors
@@ -70,7 +70,7 @@ export default function App() {
       </div>
     );
   } // Displays Tree and Highlights Descendants of Current Person
-  else if (currentDisplay == 4) {
+  else if (currentDisplay === 4) {
     return (
       <div className="App">
         <Descendants

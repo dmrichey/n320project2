@@ -8,42 +8,54 @@
       "id": 1,
       "spouse1": 1,
       "spouse2": 2,
-      "children": [3]
+      "children": [3],
+      "nodeXCoord": 80,
+      "nodeYCoord": 180
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 2,
       "spouse1": 4,
       "spouse2": 5,
-      "children": [6]
+      "children": [6],
+      "nodeXCoord": 240,
+      "nodeYCoord": 180
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 3,
       "spouse1": 3,
       "spouse2": 6,
-      "children": [7]
+      "children": [7],
+      "nodeXCoord": 160,
+      "nodeYCoord": 360
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 4,
       "spouse1": 8,
       "spouse2": 9,
-      "children": [10]
+      "children": [10],
+      "nodeXCoord": 480,
+      "nodeYCoord": 360
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 5,
       "spouse1": 7,
       "spouse2": 10,
-      "children": [11]
+      "children": [11],
+      "nodeXCoord": 320,
+      "nodeYCoord": 540
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 6,
       "spouse1": 11,
       "spouse2": 12,
-      "children": [13, 14, 15]
+      "children": [13, 14, 15],
+      "nodeXCoord": 640,
+      "nodeYCoord": 720
     }
   ],
   "persons": [
@@ -53,167 +65,257 @@
     {
       "_Comment1": "INDEX VALUES",
       "id": 1,
+      "parents": 0,
+      "marriage": 1,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Le'Carel",
       "race": "Redeemed",
+      "born-text": "Born",
       "born": "27th Siege, Year 3146",
+      "death-text": "Passed",
       "died": "27th Siege, Year 3202",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 40,
+      "nodeYCoord": 90
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 2,
+      "parents": 0,
+      "marriage": 1,
       "_Comment2": "DATA VALUES",
       "gender": 1,
       "name": "As'Ryena",
       "race": "Redeemed",
+      "born-text": "Born",
       "born": "27th Siege, Year 3152",
+      "death-text": "Passed",
       "died": "27th Siege, Year 3201",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 120,
+      "nodeYCoord": 90
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 3,
+      "parents": 1,
+      "marriage": 3,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Le'Teravis",
       "race": "Redeemed",
+      "born-text": "Born",
       "born": "27th Siege, Year 3188",
+      "death-text": "Slain",
       "died": "27th Siege, Year 3221",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 80,
+      "nodeYCoord": 270
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 4,
+      "parents": 0,
+      "marriage": 2,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Dis'Tyral",
       "race": "Redeemed",
+      "born-text": "Born",
       "born": "27th Siege, Year 3151",
+      "death-text": "Passed",
       "died": "27th Siege, Year 3198",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 200,
+      "nodeYCoord": 90
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 5,
+      "parents": 0,
+      "marriage": 2,
       "_Comment2": "DATA VALUES",
       "gender": 1,
       "name": "Fi'Alia",
       "race": "Redeemed",
+      "born-text": "Born",
       "born": "27th Siege, Year 3149",
+      "death-text": "Passed",
       "died": "27th Siege, Year 3203",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 280,
+      "nodeYCoord": 90
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 6,
+      "parents": 2,
+      "marriage": 3,
       "_Comment2": "DATA VALUES",
       "gender": 1,
       "name": "Fi'Aarelis",
       "race": "Redeemed",
+      "born-text": "Born",
       "born": "27th Siege, Year 3190",
+      "death-text": "Slain",
       "died": "27th Siege, Year 3221",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 240,
+      "nodeYCoord": 270
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 7,
+      "parents": 3,
+      "marriage": 5,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Le'Rasviel Cordratus",
       "race": "Redeemed",
+      "born-text": "Born",
       "born": "27th Siege, Year 3209",
+      "death-text": "Ascended",
       "died": "27th Siege, Year 3233",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 160,
+      "nodeYCoord": 450
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 8,
+      "parents": 0,
+      "marriage": 4,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Illi'tor Sae'vel",
       "race": "Eternatis",
+      "born-text": "Born",
       "born": "27th Siege, Year 2764",
+      "death-text": "Passed",
       "died": "28th Siege, Year 115",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 400,
+      "nodeYCoord": 270
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 9,
+      "parents": 0,
+      "marriage": 4,
       "_Comment2": "DATA VALUES",
       "gender": 1,
       "name": "Tor'avelin",
       "race": "Eternatis",
+      "born-text": "Born",
       "born": "27th Siege, Year 2663",
+      "death-text": "Passed",
       "died": "28th Siege, Year 156",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 560,
+      "nodeYCoord": 270
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 10,
+      "parents": 4,
+      "marriage": 5,
       "_Comment2": "DATA VALUES",
       "gender": 1,
       "name": "Ebri'eta'alin",
       "race": "Eternatis",
+      "born-text": "Born",
       "born": "27th Siege, Year 3112",
+      "death-text": "Slain",
       "died": "27th Siege, Year 3232",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 480,
+      "nodeYCoord": 450
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 11,
+      "parents": 5,
+      "marriage": 6,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Rasviel",
       "race": "Umbrathis",
+      "born-text": "Returned",
       "born": "28th Siege, Year 324",
+      "death-text": "Passed",
       "died": "28th Siege, Year 412",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 320,
+      "nodeYCoord": 630
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 12,
+      "parents": 0,
+      "marriage": 6,
       "_Comment2": "DATA VALUES",
       "gender": 1,
       "name": "Ebri'eta",
       "race": "Eternatis",
+      "born-text": "Born",
       "born": "28th Siege, Year 235",
+      "death-text": "Passed",
       "died": "28th Siege, Year 510",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 960,
+      "nodeYCoord": 630
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 13,
+      "parents": 6,
+      "marriage": 0,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Osjraad",
       "race": "Umbrathis",
+      "born-text": "Born",
       "born": "28th Siege, Year 328",
+      "death-text": "Passed",
       "died": "28th Siege, Year 564",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 320,
+      "nodeYCoord": 810
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 14,
+      "parents": 6,
+      "marriage": 0,
       "_Comment2": "DATA VALUES",
       "gender": 0,
       "name": "Cassius",
       "race": "Umbrathis",
+      "born-text": "Born",
       "born": "28th Siege, Year 331",
+      "death-text": "Passed",
       "died": "28th Siege, Year 582",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 640,
+      "nodeYCoord": 810
     },
     {
       "_Comment1": "INDEX VALUES",
       "id": 15,
+      "parents": 6,
+      "marriage": 0,
       "_Comment2": "DATA VALUES",
       "gender": 1,
       "name": "Ethalia",
       "race": "Umbrathis",
+      "born-text": "Born",
       "born": "28th Siege, Year 333",
+      "death-text": "Passed",
       "died": "28th Siege, Year 579",
-      "bio": ""
+      "bio": "",
+      "nodeXCoord": 960,
+      "nodeYCoord": 810
     }
   ]
 }
