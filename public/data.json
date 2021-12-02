@@ -1,7 +1,9 @@
 {
   "families": [
     {
-      "id": 0
+      "id": 0,
+      "nodeXCoord": -40,
+      "nodeYCoord": -40
     },
     {
       "_Comment1": "INDEX VALUES",
@@ -60,7 +62,9 @@
   ],
   "persons": [
     {
-      "id": 0
+      "id": 0,
+      "nodeXCoord": -40,
+      "nodeYCoord": -40
     },
     {
       "_Comment1": "INDEX VALUES",
@@ -316,6 +320,188 @@
       "bio": "",
       "nodeXCoord": 960,
       "nodeYCoord": 810
+    }
+  ],
+  "lines": [
+    {
+      "id": 0,
+      "x1Coord": 40,
+      "y1Coord": 90,
+      "x2Coord": 80,
+      "y2Coord": 180,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 1,
+      "x1Coord": 120,
+      "y1Coord": 90,
+      "x2Coord": 80,
+      "y2Coord": 180,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 2,
+      "x1Coord": 200,
+      "y1Coord": 90,
+      "x2Coord": 240,
+      "y2Coord": 180,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 3,
+      "x1Coord": 280,
+      "y1Coord": 90,
+      "x2Coord": 240,
+      "y2Coord": 180,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 4,
+      "x1Coord": 80,
+      "y1Coord": 180,
+      "x2Coord": 80,
+      "y2Coord": 270,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 5,
+      "x1Coord": 240,
+      "y1Coord": 180,
+      "x2Coord": 240,
+      "y2Coord": 270,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 6,
+      "x1Coord": 80,
+      "y1Coord": 270,
+      "x2Coord": 160,
+      "y2Coord": 360,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 7,
+      "x1Coord": 240,
+      "y1Coord": 270,
+      "x2Coord": 160,
+      "y2Coord": 360,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 8,
+      "x1Coord": 400,
+      "y1Coord": 270,
+      "x2Coord": 480,
+      "y2Coord": 360,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 9,
+      "x1Coord": 560,
+      "y1Coord": 270,
+      "x2Coord": 480,
+      "y2Coord": 360,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 10,
+      "x1Coord": 160,
+      "y1Coord": 360,
+      "x2Coord": 160,
+      "y2Coord": 450,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 11,
+      "x1Coord": 480,
+      "y1Coord": 360,
+      "x2Coord": 480,
+      "y2Coord": 450,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 12,
+      "x1Coord": 160,
+      "y1Coord": 450,
+      "x2Coord": 320,
+      "y2Coord": 540,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 13,
+      "x1Coord": 480,
+      "y1Coord": 450,
+      "x2Coord": 320,
+      "y2Coord": 540,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 14,
+      "x1Coord": 320,
+      "y1Coord": 540,
+      "x2Coord": 320,
+      "y2Coord": 630,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 15,
+      "x1Coord": 320,
+      "y1Coord": 630,
+      "x2Coord": 640,
+      "y2Coord": 720,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 16,
+      "x1Coord": 960,
+      "y1Coord": 630,
+      "x2Coord": 640,
+      "y2Coord": 720,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 17,
+      "x1Coord": 640,
+      "y1Coord": 720,
+      "x2Coord": 320,
+      "y2Coord": 810,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 18,
+      "x1Coord": 640,
+      "y1Coord": 720,
+      "x2Coord": 640,
+      "y2Coord": 810,
+      "highlightedAnc": false,
+      "highlightedDesc": false
+    },
+    {
+      "id": 19,
+      "x1Coord": 640,
+      "y1Coord": 720,
+      "x2Coord": 960,
+      "y2Coord": 810,
+      "highlightedAnc": false,
+      "highlightedDesc": false
     }
   ]
 }

@@ -7,19 +7,30 @@ import Ancestors from "./Components/Ancestors";
 import Descendants from "./Components/Descendants";
 
 export default function App() {
-  const [treeData, setTreeData] = useState({});
+  const [treeData, setTreeData] = useState({
+    families: [],
+    persons: [],
+    lines: [],
+  });
   const [familyIndex, setFamilyIndex] = useState(0);
   const [personIndex, setPersonIndex] = useState(0);
   const [currentDisplay, setCurrentDisplay] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch("data.json")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         setTreeData(data);
+        setLoading(false);
       });
   }, []);
+
+  if (loading) {
+    return <p>Currently Loading Data</p>;
+  }
 
   // Display Tree
   if (currentDisplay === 0) {
