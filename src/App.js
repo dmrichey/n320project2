@@ -1,10 +1,10 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
 import Tree from "./Components/Tree";
 import Family from "./Components/Family";
 import Person from "./Components/Person";
 import Ancestors from "./Components/Ancestors";
 import Descendants from "./Components/Descendants";
+import "./styles.css";
 
 export default function App() {
   const [treeData, setTreeData] = useState({
@@ -15,7 +15,7 @@ export default function App() {
   const [familyIndex, setFamilyIndex] = useState(0);
   const [personIndex, setPersonIndex] = useState(0);
   const [currentDisplay, setCurrentDisplay] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);

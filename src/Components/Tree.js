@@ -1,9 +1,4 @@
-import { useState } from "react";
-
 export default function Tree(props) {
-  const [namePreview, setNamePreview] = useState("");
-  const [bioPreview, setBioPreview] = useState("");
-
   let familyNodeEls = props.data.families.map((node, ind) => {
     return (
       <circle
@@ -24,6 +19,7 @@ export default function Tree(props) {
         cx={node.nodeXCoord}
         cy={node.nodeYCoord}
         onClick={props.selectPerson}
+        //onMouseOver={SetPreview(ind)}
         nodeindex={ind}
       />
     );
@@ -36,6 +32,7 @@ export default function Tree(props) {
         x2={line.x2Coord}
         y2={line.y2Coord}
         stroke="black"
+        strokeWidth={5}
       />
     );
   });
@@ -49,15 +46,13 @@ export default function Tree(props) {
           {personNodeEls}
         </svg>
       </div>
-      <div className="sidePanel">
-        <div className="namePreview">{namePreview}</div>
-        <div className="bioPreview">{bioPreview}</div>
-      </div>
+      <div className="sidePanel"></div>
     </div>
   );
 
-  function SetPreview(ind) {
-    setNamePreview(props.data.persons[ind].name);
-    setBioPreview(props.data.persons[ind].bio);
-  }
+  //function SetPreview(ind) {
+  //console.log(ind);
+  //setNamePreview(props.data.persons[ind].name);
+  //setBioPreview(props.data.persons[ind].bio);
+  //}
 }
