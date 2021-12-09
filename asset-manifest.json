@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/n320project2/static/css/main.ba0ff043.chunk.css",
-    "main.js": "/n320project2/static/js/main.1f30e64e.chunk.js",
-    "main.js.map": "/n320project2/static/js/main.1f30e64e.chunk.js.map",
+    "main.css": "/n320project2/static/css/main.76c9c77d.chunk.css",
+    "main.js": "/n320project2/static/js/main.9f49227c.chunk.js",
+    "main.js.map": "/n320project2/static/js/main.9f49227c.chunk.js.map",
     "runtime-main.js": "/n320project2/static/js/runtime-main.920731ea.js",
     "runtime-main.js.map": "/n320project2/static/js/runtime-main.920731ea.js.map",
     "static/js/2.4d160502.chunk.js": "/n320project2/static/js/2.4d160502.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.236841bb.chunk.js": "/n320project2/static/js/3.236841bb.chunk.js",
     "static/js/3.236841bb.chunk.js.map": "/n320project2/static/js/3.236841bb.chunk.js.map",
     "index.html": "/n320project2/index.html",
-    "static/css/main.ba0ff043.chunk.css.map": "/n320project2/static/css/main.ba0ff043.chunk.css.map",
+    "static/css/main.76c9c77d.chunk.css.map": "/n320project2/static/css/main.76c9c77d.chunk.css.map",
     "static/js/2.4d160502.chunk.js.LICENSE.txt": "/n320project2/static/js/2.4d160502.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.920731ea.js",
     "static/js/2.4d160502.chunk.js",
-    "static/css/main.ba0ff043.chunk.css",
-    "static/js/main.1f30e64e.chunk.js"
+    "static/css/main.76c9c77d.chunk.css",
+    "static/js/main.9f49227c.chunk.js"
   ]
 }

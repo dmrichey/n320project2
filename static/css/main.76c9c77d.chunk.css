@@ -1,0 +1,2 @@
+.App{font-family:sans-serif;text-align:center}.content{display:flex}.viewport{width:1280px;height:952px;background-color:grey}.info{margin:0 auto;height:80%;width:80%;justify-content:center}.info,.sidePanel{display:flex;flex-direction:column}.sidePanel{width:640px;height:952px;background-color:#a9a9a9;justify-content:space-evenly;align-items:center}.familyNode{fill:gold}.personNode{fill:purple}.nodeButtons{top:0;left:0;z-index:1;position:absolute}
+/*# sourceMappingURL=main.76c9c77d.chunk.css.map */
