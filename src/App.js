@@ -7,16 +7,18 @@ import Descendants from "./Components/Descendants";
 import "./styles.css";
 
 export default function App() {
-  const [treeData, setTreeData] = useState({
-    families: [],
-    persons: [],
-    lines: [],
-  });
+  // container for json data
+  const [treeData, setTreeData] = useState({});
+  // index into families array within data
   const [familyIndex, setFamilyIndex] = useState(0);
+  // index into persons array within data
   const [personIndex, setPersonIndex] = useState(0);
+  // toggle amongst component views
   const [currentDisplay, setCurrentDisplay] = useState(0);
+  // enables delay to ensure data loads properly
   const [loading, setLoading] = useState(true);
 
+  // load data
   useEffect(() => {
     setLoading(true);
     fetch("data.json")
@@ -51,6 +53,7 @@ export default function App() {
           data={treeData}
           index={familyIndex}
           selectPerson={selectPerson}
+          resetStyles={returnToTree}
         />
       </div>
     );
@@ -64,6 +67,7 @@ export default function App() {
           selectFamily={selectFamily}
           displayAncestors={displayAncestors}
           displayDescendants={displayDescendants}
+          resetStyles={returnToTree}
         />
       </div>
     );
@@ -95,26 +99,37 @@ export default function App() {
     );
   }
 
+  // Triggered on Click from all components except Tree, to return to Tree
   function returnToTree() {
     setFamilyIndex(0);
     setPersonIndex(0);
     setCurrentDisplay(0);
   }
 
+  // Selects a Family Node, and Displays the data and connections associated
   function selectFamily(nodeId) {
+    if (nodeId === 0) {
+      returnToTree();
+    }
     setFamilyIndex(nodeId);
     setCurrentDisplay(1);
   }
 
+  // Selects a Person Node, and Displays the data and connections associated
   function selectPerson(nodeId) {
+    if (nodeId === 0) {
+      returnToTree();
+    }
     setPersonIndex(nodeId);
     setCurrentDisplay(2);
   }
 
+  // Called from within Person view, displays Ancestors of that Person
   function displayAncestors() {
     setCurrentDisplay(3);
   }
 
+  // Called from within Person view, displays Descendants of that Person
   function displayDescendants() {
     setCurrentDisplay(4);
   }

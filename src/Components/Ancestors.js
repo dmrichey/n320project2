@@ -1,16 +1,26 @@
+import { useState } from "react";
+
 export default function Ancestors(props) {
+  // Preview Text Containers
+  const [namePreview, setNamePreview] = useState("");
+  const [bioPreview, setBioPreview] = useState("");
+
+  // array containing lines to style to highlight
   let linesToStyle = [];
+
+  // array for traversal of graph
   let nodesToVisit = [];
-  //console.log(props.data.persons[props.index]);
+  // add starting Node to array
   nodesToVisit.push(props.data.persons[props.index]);
-  let currentNode = { id: 0, parents: 0, marriage: 0, isFamily: false };
+  let currentNode = {};
+  // remove currentNode from toVisit, showing Visited
   currentNode = nodesToVisit.shift();
-  //console.log(currentNode);
-  //console.log(currentNode.id);
+  // search Node data for higher Nodes in graph (parents, spouses)
   while (currentNode != null) {
     if (currentNode.isFamily) {
       let parentNum1 = currentNode.spouse1;
       let parentNum2 = currentNode.spouse2;
+      // if both spouses are valid Nodes, add to toVisit array
       if (parentNum1 !== 0 && parentNum2 !== 0) {
         nodesToVisit.push(props.data.persons[parentNum1]);
         nodesToVisit.push(props.data.persons[parentNum2]);
@@ -19,15 +29,18 @@ export default function Ancestors(props) {
       }
     } else {
       let parentNum = currentNode.parents;
+      // if parent is valid Node, add to toVisit array
       if (parentNum !== 0) {
         nodesToVisit.push(props.data.families[parentNum]);
         linesToStyle.push(props.data.lines[currentNode.parentLine]);
       }
     }
+    // remove first element of toVisit, search for higher Nodes
     currentNode = nodesToVisit.shift();
   }
-  console.log(linesToStyle);
+  //console.log(linesToStyle);
 
+  // Construct Tree Copy
   let familyNodeEls = props.data.families.map((node, ind) => {
     return (
       <circle
@@ -35,7 +48,9 @@ export default function Ancestors(props) {
         r={25}
         cx={node.nodeXCoord}
         cy={node.nodeYCoord}
-        onClick={props.selectFamily}
+        onClick={() => {
+          props.selectFamily(ind);
+        }}
         nodeindex={ind}
       />
     );
@@ -47,8 +62,12 @@ export default function Ancestors(props) {
         r={25}
         cx={node.nodeXCoord}
         cy={node.nodeYCoord}
-        onClick={props.selectPerson}
-        //onMouseEnter={SetPreview(ind)}
+        onClick={() => {
+          props.selectPerson(ind);
+        }}
+        onMouseEnter={() => {
+          SetPreview(ind);
+        }}
         nodeindex={ind}
       />
     );
@@ -65,6 +84,7 @@ export default function Ancestors(props) {
       />
     );
   });
+  // Reconstruct Highlighted Lines
   let highlightedLineEls = linesToStyle.map((line, ind) => {
     return (
       <line
@@ -78,6 +98,7 @@ export default function Ancestors(props) {
     );
   });
 
+  // Display Ancestors
   return (
     <div className="content">
       <div className="viewport">
@@ -89,14 +110,17 @@ export default function Ancestors(props) {
         </svg>
       </div>
       <div className="sidePanel">
+        <div className="namePreview">{namePreview}</div>
+        <div className="bioPreview">{bioPreview}</div>
         <button onClick={props.resetStyles}>Reset Tree</button>
       </div>
     </div>
   );
 
-  //function SetPreview(ind) {
-  //console.log(ind);
-  //setNamePreview(props.data.persons[ind].name);
-  //setBioPreview(props.data.persons[ind].bio);
-  //}
+  // Set Preview Text
+  function SetPreview(ind) {
+    console.log(ind);
+    setNamePreview(props.data.persons[ind].name);
+    setBioPreview(props.data.persons[ind].bio);
+  }
 }

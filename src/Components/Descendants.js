@@ -1,14 +1,24 @@
+import { useState } from "react";
+
 export default function Descendants(props) {
+  // Containers for Preview Text
+  const [namePreview, setNamePreview] = useState("");
+  const [bioPreview, setBioPreview] = useState("");
+
+  // Container for highlighted lines
   let linesToStyle = [];
+
+  // Container for navigating graph
   let nodesToVisit = [];
-  //console.log(props.data.persons[props.index]);
+
+  // Begin at current Node
   nodesToVisit.push(props.data.persons[props.index]);
-  let currentNode = { id: 0, parents: 0, marriage: 0, isFamily: false };
+  let currentNode = {};
   currentNode = nodesToVisit.shift();
-  //console.log(currentNode);
-  //console.log(currentNode.id);
+  // Search through graph for lower level Nodes(marriages, children)
   while (currentNode != null) {
     if (currentNode.isFamily) {
+      // add children to toVisit
       currentNode.children.forEach((element) => {
         nodesToVisit.push(props.data.persons[element]);
       });
@@ -17,15 +27,18 @@ export default function Descendants(props) {
       });
     } else {
       let marriageNum = currentNode.marriage;
+      // if valid marriage, add to toVisit
       if (marriageNum !== 0) {
         nodesToVisit.push(props.data.families[marriageNum]);
         linesToStyle.push(props.data.lines[currentNode.marriageLine]);
       }
     }
+    // remove first element from toVisit, search for lower Nodes
     currentNode = nodesToVisit.shift();
   }
-  console.log(linesToStyle);
+  //console.log(linesToStyle);
 
+  // Construct Tree Copy
   let familyNodeEls = props.data.families.map((node, ind) => {
     return (
       <circle
@@ -33,7 +46,9 @@ export default function Descendants(props) {
         r={25}
         cx={node.nodeXCoord}
         cy={node.nodeYCoord}
-        onClick={props.selectFamily}
+        onClick={() => {
+          props.selectFamily(ind);
+        }}
         nodeindex={ind}
       />
     );
@@ -45,8 +60,12 @@ export default function Descendants(props) {
         r={25}
         cx={node.nodeXCoord}
         cy={node.nodeYCoord}
-        onClick={props.selectPerson}
-        //onMouseEnter={SetPreview(ind)}
+        onClick={() => {
+          props.selectPerson(ind);
+        }}
+        onMouseEnter={() => {
+          SetPreview(ind);
+        }}
         nodeindex={ind}
       />
     );
@@ -63,6 +82,7 @@ export default function Descendants(props) {
       />
     );
   });
+  // Reconstruct Highlighted Lines
   let highlightedLineEls = linesToStyle.map((line, ind) => {
     return (
       <line
@@ -76,6 +96,7 @@ export default function Descendants(props) {
     );
   });
 
+  // Display Descendants
   return (
     <div className="content">
       <div className="viewport">
@@ -87,14 +108,17 @@ export default function Descendants(props) {
         </svg>
       </div>
       <div className="sidePanel">
+        <div className="namePreview">{namePreview}</div>
+        <div className="bioPreview">{bioPreview}</div>
         <button onClick={props.resetStyles}>Reset Tree</button>
       </div>
     </div>
   );
 
-  //function SetPreview(ind) {
-  //console.log(ind);
-  //setNamePreview(props.data.persons[ind].name);
-  //setBioPreview(props.data.persons[ind].bio);
-  //}
+  // Update preview text
+  function SetPreview(ind) {
+    console.log(ind);
+    setNamePreview(props.data.persons[ind].name);
+    setBioPreview(props.data.persons[ind].bio);
+  }
 }
